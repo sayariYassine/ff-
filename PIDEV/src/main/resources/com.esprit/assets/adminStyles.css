@@ -1,0 +1,133 @@
+/* adminStyles.css */
+
+.root {
+    -fx-font-size: 14px;
+    -fx-background-color: #2b2b2b;
+}
+
+.main-container {
+    -fx-padding: 20px;
+    -fx-pref-width: 1400px;
+    -fx-max-width: 1400px;
+}
+
+.label {
+    -fx-text-fill: #e0e0e0;
+}
+
+.text-field {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #e0e0e0;
+    -fx-prompt-text-fill: #9b9b9b;
+}
+
+.table-view {
+    -fx-background-color: #2b2b2b;
+    -fx-table-cell-border-color: transparent;
+    -fx-min-height: 500px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #3c3f41;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: #4c5052;
+    -fx-border-width: 0 1 1 0;
+    -fx-padding: 8 15 8 15;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #e0e0e0;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 8 15 8 15;
+}
+
+.table-row-cell {
+    -fx-background-color: #2b2b2b;
+    -fx-table-cell-border-color: #3c3f41;
+    -fx-cell-size: 40px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #323232;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4c5052;
+}
+
+.table-view .column-header {
+    -fx-pref-height: 40px;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Pagination styling */
+.pagination {
+    -fx-page-information-visible: false;
+}
+
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 0;
+}
+
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: #3c3f41, #2b2b2b;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: #4c5052;
+}
+
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected {
+    -fx-background-insets: 0;
+    -fx-background-color: #5c6366;
+    -fx-text-fill: #ffffff;
+}
+
+.pagination > .pagination-control > .control-box > .left-arrow-button > .left-arrow,
+.pagination > .pagination-control > .control-box > .right-arrow-button > .right-arrow {
+    -fx-background-color: #e0e0e0;
+}
+
+/* Scroll bar styling */
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  #4c5052;
+}
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  #4c5052;
+}
+
+

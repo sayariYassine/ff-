@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.esprit.controllers.EventController"
+           stylesheets="@com.esprit/assets/adminStyles.css">
+    <VBox spacing="20" alignment="TOP_CENTER" styleClass="main-container">
+        <!-- Search Bar -->
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Search:"/>
+            <TextField fx:id="searchField" promptText="Enter event title..." onKeyReleased="#handleSearch"/>
+        </HBox>
+
+        <!-- Table Section -->
+        <TableView fx:id="eventTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn text="Title" fx:id="titleColumn"/>
+                <TableColumn text="Category" fx:id="categoryColumn"/>
+                <TableColumn text="Start Date" fx:id="startDateColumn"/>
+                <TableColumn text="End Date" fx:id="endDateColumn"/>
+                <TableColumn text="Location" fx:id="locationColumn"/>
+                <TableColumn text="Max Capacity" fx:id="maxCapacityColumn"/>
+                <TableColumn text="Current Capacity" fx:id="currentCapacityColumn"/>
+            </columns>
+            <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+        </TableView>
+
+        <!-- Pagination -->
+        <HBox alignment="CENTER">
+            <Pagination fx:id="pagination" pageCount="10" maxPageIndicatorCount="5" />
+        </HBox>
+    </VBox>
+</StackPane>

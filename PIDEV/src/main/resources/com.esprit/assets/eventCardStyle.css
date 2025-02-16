@@ -1,0 +1,44 @@
+.event-card {
+    -fx-background-color: #1E1E1E;
+    -fx-background-radius: 12;
+    -fx-padding: 15;
+}
+
+.event-image {
+    -fx-background-radius: 30;
+    -fx-border-radius:30;
+}
+
+.event-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.event-description {
+    -fx-text-fill: #B3B3B3;
+}
+
+.event-date {
+    -fx-text-fill: #B3B3B3;
+}
+
+.participate-button {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+     -fx-border-width: 2px;
+    -fx-pref-width: 150px;    /* Preferred width */
+    /*-fx-pref-height: 50px;*/
+}
+
+.view-details-button {
+    -fx-background-color: #1E1E1E;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-radius:5;
+     -fx-border-color: white;
+     -fx-border-width: 1px;
+     -fx-width: 150px;
+     /*-fx-height: 50px;*/
+}

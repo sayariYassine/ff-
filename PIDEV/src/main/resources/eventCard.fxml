@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER_LEFT" maxWidth="600" spacing="10" styleClass="event-card" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="com.esprit.controllers.EventController"
+>
+
+    <stylesheets>
+        <URL value="@com.esprit/assets/eventCardStyle.css" />
+    </stylesheets>
+
+    <ImageView fitHeight="150" fitWidth="200" styleClass="event-image">
+        <image>
+            <Image url="@com.esprit/images/placeholder_event.png" />
+        </image>
+    </ImageView>
+
+    <VBox spacing="5">
+        <Label fx:id="eventTitle" styleClass="event-title" text="Citywide Basketball Tournament" />
+        <Label fx:id="eventDescription" maxWidth="450" styleClass="event-description" text="A basketball game featuring teams using smart basketballs equipped with sensors to track player performance..." wrapText="true" />
+        <Label fx:id="eventDate" styleClass="event-date" text="Jan 26, 2025 - Feb 10, 2025" />
+        <Label fx:id="eventLocation" styleClass="event-description" text="Location: Downtown Stadium" />
+        <HBox>
+            <Label styleClass="event-description" text="Category: " />
+            <Label fx:id="eventCategory" styleClass="event-description" text="Category: Sports" />
+        </HBox>
+        <HBox>
+            <Label styleClass="event-description" text="Remaining Places: " />
+            <Label fx:id="remainingPlaces" styleClass="event-description" text="Remaining Places: 50" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Button fx:id="participateButton" styleClass="participate-button" text="Participate" />
+            <Button fx:id="viewDetailsButton" styleClass="view-details-button" text="View details" />
+        </HBox>
+    </VBox>
+</HBox>

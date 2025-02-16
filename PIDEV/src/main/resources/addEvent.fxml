@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controllers.EventController"
+            prefWidth="Infinity" prefHeight="Infinity" style="-fx-background-color: rgba(0, 0, 0, 0.9);">
+    <stylesheets>
+        <URL value="@com.esprit/assets/styles.css" />
+    </stylesheets>
+
+    <VBox spacing="10" alignment="CENTER">
+        <!-- Title -->
+        <Label text="Add New Event" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <!-- Title Field -->
+            <Label text="Title:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="titleField" promptText="Enter event title" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <!-- Description Field -->
+            <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="descriptionField" promptText="Enter event description" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- Location Field -->
+            <Label text="Location:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="locationField" promptText="Enter event location" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <!-- Start Date Field -->
+            <Label text="Start Date:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="startDatePicker" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <!-- End Date Field -->
+            <Label text="End Date:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="endDatePicker" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <!-- Category Field -->
+            <Label text="Categorie:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+            <TextField fx:id="categorieField" promptText="Enter event category" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+            <!-- Max Capacity Field -->
+            <Label text="Max Capacity:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <TextField fx:id="maxCapacityField" promptText="Enter max capacity" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+            <!-- Image Path Field -->
+            <Label text="Image:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <HBox spacing="10" GridPane.rowIndex="6" GridPane.columnIndex="1">
+                <TextField fx:id="imagePathField" promptText="Choose an image" editable="false" HBox.hgrow="ALWAYS"/>
+                <Button text="Browse" onAction="#handleImageSelection" styleClass="browse-button"/>
+            </HBox>
+        </GridPane>
+
+        <!-- Add Event Button -->
+        <Button text="Add Event" fx:id="addEventButton" onAction="#handleAddEvent"/>
+    </VBox>
+</AnchorPane>

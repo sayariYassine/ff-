@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import java.net.URL?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controllers.EventDetailsController"
+>
+
+    <!-- Scrollable Content -->
+    <ScrollPane fitToWidth="true" fitToHeight="true" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+                AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <VBox fx:id="rootContainer" spacing="20" styleClass="root-container">
+
+            <stylesheets>
+                <URL value="@com.esprit/assets/eventDetailsStyle.css" />
+            </stylesheets>
+
+            <!-- Centered Event Image -->
+            <HBox alignment="CENTER">
+                <ImageView fx:id="eventImage" fitWidth="600" fitHeight="400" styleClass="event-image">
+                    <image>
+                        <Image url="@com.esprit/images/placeholder_event.png" />
+                    </image>
+                </ImageView>
+            </HBox>
+
+            <!-- Event Title -->
+            <Label fx:id="eventTitle" text="Community soccer game" styleClass="event-title"/>
+
+            <!-- Information Section -->
+            <VBox spacing="20">
+                <Label text="Information" styleClass="section-title"/>
+
+                <VBox spacing="15">
+                    <VBox>
+                        <Label text="Description" styleClass="info-label"/>
+                        <Label fx:id="eventDescription" text="Community soccer game" styleClass="info-content"/>
+                    </VBox>
+                    <Separator styleClass="divider"/>
+
+                    <VBox>
+                        <Label text="Status" styleClass="info-label"/>
+                        <Label fx:id="eventStatus" text="Upcoming" styleClass="info-content"/>
+                    </VBox>
+                    <Separator styleClass="divider"/>
+
+                    <VBox>
+                        <Label text="Date" styleClass="info-label"/>
+                        <Label fx:id="eventDate" text="July 8th 2025" styleClass="info-content"/>
+                    </VBox>
+                    <Separator styleClass="divider"/>
+
+                    <VBox>
+                        <Label text="Location" styleClass="info-label"/>
+                        <Label fx:id="eventLocation" text="25th Avenue" styleClass="info-content"/>
+                    </VBox>
+                </VBox>
+            </VBox>
+
+            <!-- Participants Section -->
+            <!-- Participants Section -->
+            <VBox fx:id="participantsSection" spacing="10">
+                <Label text="Participants" styleClass="section-title"/>
+
+                <!-- Dynamic Participant Entries -->
+                <!-- These entries will be added programmatically from the controller -->
+            </VBox>
+        </VBox>
+    </ScrollPane>
+
+    <!-- Floating Call-To-Action Button -->
+    <Button fx:id="participateButton" text="Participate"
+            style="-fx-background-color: #007BFF;
+                   -fx-text-fill: white;
+                   -fx-background-radius: 5;
+                   -fx-border-width: 2px;
+                   -fx-font-size: 24px;
+                   -fx-padding: 10 20;
+                   -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 2, 2);"
+            AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="100"/>
+</AnchorPane>
